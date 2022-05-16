@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+ 
+<div  id="map" style="position: relative; width: 100%; height: 500px;" class="container">
+    <link rel="stylesheet" href="/static/css/datatable.min.css">
+        
+</div>
+
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Источник</th>
+            <th>Поучатель</th>
+            <th>Информация</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.1.1.1</td>
+            <td>1.1.1.1</td>
+            <td>ываываываыва</td>
+        </tr>
+        <tr>
+            <td>2.2.2.2</td>
+            <td>2.2.2.2</td>
+            <td>олролролролро</td>
+        </tr>
+         
+    </tbody>
+</table>
+
+<script type="text/javascript" charset="utf8" src="/static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/static/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src=/static/js/dataTables.bootstrap5.js"></script>
+
+
+<script src="{% static 'testMap/d3/d3.js' %}"></script>
+<script src="{% static 'testMap/topojson/topojson.js' %}"></script>
+<script src="{% static 'testMap/datamaps/dmaps.js' %}"></script>
+<script src="{% static 'testMap/map.js' %}"></script>
+
+
+
+
+
+{% endblock %}

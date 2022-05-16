@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap5.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="/static/notiflix/dist/notiflix-3.2.5.min.css">
+    <script type="text/javascript" charset="utf8" src="/static/notiflix/dist/notiflix-3.2.5.min.js"></script>
+  </head>
+
+  {% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="collapse navbar-collapse">
+
+    <a class="navbar-brand "  href="#">  PCAP Аналитика</a>
+
+  </div>
+
+    <ul class="navbar-nav ml-auto col-lg-1 ">
+  <li class="nav-item">
+    <a class="nav-link " href="/admin">Админка</a>
+  </li>
+
+    </ul>
+</nav>
+
+{% endblock %}
+
+
+  <body id="ele">
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block bg-dark sidebar collapse">
+      <div class="position-sticky sticky-top pt-3" >
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/"> Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/Map" onclick="Notiflix.Block.arrows('body')" > Карта </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/test" onclick="Notiflix.Block.arrows('body')" >Общая информация</a>
+          </li>
+            <li class="border-top my-3"></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/protocol" onclick="Notiflix.Block.arrows('body')">Протоколы</a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/geolocation" onclick="Notiflix.Block.arrows('body')">Геолокация</a>
+          </li>
+       
+           <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/packets_size" onclick="Notiflix.Block.arrows('body')"> Размер пакетов </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/res_mac" onclick="Notiflix.Block.arrows('body')"> MAC </a>
+          </li>
+             <li class="border-top my-3"></li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/res_malware" onclick="Notiflix.Block.arrows('body')">Вредоносные пакеты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/graphs/" onclick="Notiflix.Block.arrows('body')">Графы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/detectedFiles/" onclick="Notiflix.Block.arrows('body')">Файлы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="/results/voip/" onclick="Notiflix.Block.arrows('body')">VOIP аудио</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+    <script>
+
+
+     
+
+      
+
+      </script>
+
+      <main class="col-md-12 ms-sm-auto col-lg-10 px-md-5">
+
+      {% block content %}
+
+      {% endblock %}
+      </main>
+  </div>
+</div>
+
+
+    <script type="text/javascript" charset="utf8" src="/static/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/js/dataTables.bootstrap5.js"></script>
+   
+   
+   
+
+    {% block scripts %}{% endblock %}
+  </body>
+
+<footer class="mt-5 my-5 pt-5 text-muted text-center text-small">
+  <p class="mb-1">7 рота</p>
+</footer>
+
+</html>

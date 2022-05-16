@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+ <div class="d-flex col-md-12 text-center ">
+
+<main class=" col-md-12 ">
+
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </tfoot>
+</table>
+
+    </main>
+
+</div>
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable({        ajax:'/pd_data',
+        columns: [
+            { data: 'name' },
+            { data: 'position' },
+            { data: 'office' },
+            { data: 'extn' },
+            { data: 'start_date' },
+            { data: 'salary' }
+        ],
+      });
+    });
+  </script>
+{% endblock %}
+
+
+
+{% endblock %}

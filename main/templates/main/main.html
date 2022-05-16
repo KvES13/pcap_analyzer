@@ -1,0 +1,30 @@
+
+{% extends 'main/base.html' %}
+
+{% load static %}
+ {% block content %}
+
+  <div class="d-flex col-md-12  text-center ">
+
+<main class=" col-md-12 pricing-header mx-auto text-center ">
+  
+     <img src="/static/images/4.jpg" style="width:95%; height:80%;">
+    <h3 class="display-10">Переместите файл или выберите из списка</h3>
+    <p class="lead">
+
+        
+      <p1>{{data}}</p1>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <input type="text" name="fileTitle" placeholder="Название файла">
+      <input type="file" name="uploadedFile">
+      {% csrf_token %}
+      <input type="submit" value="Загрузить" onclick="Notiflix.Block.arrows('body')">
+  </form>
+    </p>
+
+</main>
+
+</div>
+
+
+{% endblock %}

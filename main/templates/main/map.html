@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <main class=" col-md-12 ">
+<div  id="map" style="position: relative; width: 100%; height: 900px;" class="container">
+    <link rel="stylesheet" href="/static/css/datatable.min.css">  </div>
+
+<table id="table_id"  class="table table-striped"  style="width:100%">
+    <thead>
+        <tr>
+            <th>IP отправителя</th>
+            <th>Страна отправителя</th>
+            <th>IP получателя</th>
+             <th>Страна получателя</th>
+             <th>Широта 1</th>
+             <th>Долгота 1</th>
+             <th>Широта 2</th>
+             <th>Долгота 2</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>IP отправителя</th>
+            <th>Страна отправителя</th>
+            <th>IP получателя</th>
+             <th>Страна получателя</th>
+             <th>Широта 1</th>
+             <th>Долгота 1</th>
+             <th>Широта 2</th>
+             <th>Долгота 2</th>
+        </tr>
+    </tfoot>
+</table>
+</main>
+
+
+
+{% block scripts %}
+<script>
+    $(document).ready(function () {
+      $('#table_id').DataTable({        ajax: '/get_map_data',
+ striped: true,
+    pageList: [10, 25, 50, 100, 'ALL'],
+        columns: [
+            {data: 'source_ip'},
+            {data: 'country1'},
+            {data: 'destination_ip'},
+            {data: 'country2'},
+            {data: 'lat1'},
+            {data: 'long1'},
+            {data: 'lat2'},
+            {data: 'long2'}
+          
+        ],
+      });
+    });
+  </script>
+
+
+
+<script src="{% static 'testMap/d3/d3.js' %}"></script>
+<script src="{% static 'testMap/topojson/topojson.js' %}"></script>
+<script src="{% static 'testMap/datamaps/dmaps.js' %}"></script>
+<script src="{% static 'testMap/map.js' %}"></script>
+
+
+{% endblock %}
+
+
+{% endblock %}

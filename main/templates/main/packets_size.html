@@ -1,0 +1,161 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+
+<div class="container" style="height: 1200px; width: 100%">
+    <div id="time_flow" style="height: 600px;width: 100%;float:left;"></div>
+    <div id="flow_in" style="height: 600px;width:50%;float:left;"></div>
+      <div id="flow_out" style="height: 600px;width:50%;float:left;"></div>
+</div>
+
+<script src="/static/js/echarts.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('time_flow'));
+            var option = {
+                      title : {
+                    text: 'Зависимость размера пакета от времени',
+                    x:'center'
+                },
+                tooltip : {
+                        trigger: 'axis'
+                    },
+                      legend: {
+    data: ['Evaporation', 'Rainfall'],
+    left: 10
+  },
+                    calculable : false,
+                    dataZoom: [
+    {
+      type: 'inside'
+    },
+    {
+      type: 'slider'
+    }
+  ],
+                    xAxis : [
+                        {
+                            type : 'category',
+                            name : '',
+                            boundaryGap : true,
+                            data : {{time}}
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            name : '',
+                            axisLabel : {
+                                formatter: '{value} byte'
+                            }
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'размер пакета',
+                            type:'line',
+                            smooth:true,
+                            symbol: 'none',
+                            itemStyle:{
+                                normal:{
+                                    label:{show:true},
+                                    color:'#6495ed', //图例颜色设置
+                                    },
+                                emphasis:{label:{show:true}}
+                                    },
+                            data: {{plenght}}
+                        }
+                    ]
+                };
+            myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('flow_in'));
+            var option  = {
+  title: {
+    text: 'Количество отправленных пакетов одним IP'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'value'
+  },
+  yAxis: {
+    type: 'category',
+    data: [{% for key in source_ip.keys %}
+                        "{{key}}",
+                        {% endfor %}]
+  },
+  series: [
+    {
+      name: 'Количество отправленных пакетов',
+      type: 'bar',
+          dataSorting: {
+        enabled: true
+    },
+      large: true,
+      data: [{% for value in source_ip.values %}
+                        "{{value}}",
+                        {% endfor %}]
+    }
+  ]
+};
+ myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('flow_out'));
+            var option  = {
+  title: {
+    text: 'Количество полученных пакетов одним IP'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'value',
+    boundaryGap: [0, 0.01]
+  },
+  yAxis: {
+    type: 'category',
+    data: [{% for key in destination_ip.keys %}
+                        "{{key}}",
+                        {% endfor %}]
+  },
+  series: [
+    {
+      name: 'Количество полученных пакетов',
+      type: 'bar',
+      data: [{% for value in destination_ip.values %}
+                        "{{value}}",
+                        {% endfor %}]
+    }
+  ]
+};
+ myChart.setOption(option);
+</script>
+{% endblock %}

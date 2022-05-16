@@ -1,0 +1,81 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+  <div class="d-flex col-md-12 text-center ">
+
+<main class=" col-md-12 ">
+
+<table id="ex"  class="table table-striped"  style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Время</th>
+                <th>src IP</th>
+                <th>dst IP</th>
+                 <th>src port</th>
+                 <th>dst port</th>
+                 <th>src mac</th>
+                 <th>dst mac</th>
+                 <th>Протокол</th>
+                <th>TTL</th>
+                <th>Размер пакета</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Время</th>
+                <th>src IP</th>
+                <th>dst IP</th>
+                 <th>src port</th>
+                    <th>dst port</th>
+                 <th>src mac</th>
+                 <th>dst mac</th>
+                 <th>Протокол</th>
+                <th>TTL</th>
+                <th>Размер пакета</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#ex').DataTable({        ajax: '/cap_data',
+ striped: true,
+    pageList: [10, 25, 50, 100, 'ALL'],
+        columns: [
+            {data: 'id_pack'},
+            {data: 'time'},
+            {data: 'source_ip'},
+            {data: 'destination_ip'},
+            {data: 'src_port'},
+            {data: 'dst_port'},
+            {data: 'src_mac'},
+            {data: 'dst_mac'},
+            {data: 'protocol'},
+            {data: 'ttl'},
+            {data: 'packet_length'}
+        ],
+      });
+    });
+  </script>
+
+    </main>
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+{% endblock %}

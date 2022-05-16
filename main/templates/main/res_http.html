@@ -1,0 +1,114 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container" style="height: 1000px; width: 100%">
+    <h1 align="center">Диаграмма ТУТ БУДЕТ НАЗВАНИЕ</h1>
+    <div id="methods" style="height:400px; width:50%; float:left;"></div>
+    <div id="response" style="height:400px; width:50%; float:left;"></div>
+</div>
+
+<script src="/static/js/echarts.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('methods'));
+            var option = {
+                      title : {
+                    text: 'Http methods',
+                    x:'center'
+                },
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  legend: {
+                    top: '5%',
+                    left: 'center'
+                  },
+                  series: [
+                    {
+
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '40',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: 'POST' },
+                        { value: 735, name: 'HEAD' },
+                        { value: 580, name: 'GET' },
+                        { value: 484, name: 'PUT' },
+                        { value: 0, name: 'OPTIONS' },
+                        { value: 0, name: 'DELETE' },
+                        { value: 0, name: 'PATCH' },
+                        { value: 0, name: 'CONNECT' }
+                      ]
+                    }
+                  ]
+                };
+            myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('response'));
+            var option = {
+            title : {
+                    text: 'Http response',
+                    x:'center'
+                },
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  legend: {
+                    top: '5%',
+                    left: 'center'
+                  },
+                  series: [
+                    {
+
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '40',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '200' },
+                        { value: 735, name: '404' },
+                        { value: 580, name: '322' },
+                        { value: 484, name: '7' },
+                        { value: 300, name: '77' }
+                      ]
+                    }
+                  ]
+                };
+            myChart.setOption(option);
+</script>
+
+
+
+{% endblock %}

