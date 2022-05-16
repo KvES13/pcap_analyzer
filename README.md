@@ -16,4 +16,4 @@ pip install -r requirements.txt
 Программа разрабатывалась на Ubuntu. Вкладки VOIP и Графы работают только на Linux
 
 
- ![map](media/images/map.png)
+ ![map](static/images/map.png)
